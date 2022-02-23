@@ -94,6 +94,6 @@ python train.py --image_folder /path/to/images --annotation_folder /path/to/anno
 ```
 
 <p align="center">
-<img src="./images/qualitatives.png" width="90%" align="center"/>
+<img src="./images/qualitatives.png" width="100%" align="center"/>
 </p>
 

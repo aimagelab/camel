@@ -11,7 +11,9 @@ Please cite with the following BibTeX:
 }
 ```
 
-![CaMEL](images/camel.png)
+<p align="center">
+<img src="./images/camel.png" width="90%" align="center"/>
+</p>
 
 ## Environment setup
 Clone the repository and create the `camel_release` conda environment using the `environment.yml` file:
@@ -22,6 +24,9 @@ conda activate camel_release
 
 Note: Python 3.8 is required to run our code. 
 
+<p align="center">
+<img src="./images/camel.gif" width="30%" align="center"/>
+</p>
 
 ## Data preparation
 To run the code, annotations and images for the COCO dataset are needed.
@@ -88,4 +93,7 @@ For example, to train our model with the parameters used in our experiments, use
 python train.py --image_folder /path/to/images --annotation_folder /path/to/annotations
 ```
 
-![Qualitative Results](images/qualitatives.png)
+<p align="center">
+<img src="./images/qualitatives.png" width="90%" align="center"/>
+</p>
+

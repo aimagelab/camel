@@ -1,5 +1,15 @@
 # CaMEL: Mean Teacher Learning for Image Captioning
-This repository contains the reference code for the paper _CaMEL: Mean Teacher Learning for Image Captioning_.
+This repository contains the reference code for the paper _[CaMEL: Mean Teacher Learning for Image Captioning](https://arxiv.org/pdf/2202.10492.pdf)_.
+
+Please cite with the following BibTeX:
+```
+@article{barraco2022camel,
+  title={{CaMEL: Mean Teacher Learning for Image Captioning}},
+  author={Barraco, Manuele and Stefanini, Matteo and Cornia, Marcella and Cascianelli, Silvia and Baraldi, Lorenzo and Cucchiara, Rita},
+  journal={arXiv preprint arXiv:2202.10492},
+  year={2022}
+}
+```
 
 ![CaMEL](images/camel.png)
 

@@ -43,9 +43,6 @@ def evaluate_metrics(model, dataloader, text_field):
                 gen['%d_%d' % (it, i)] = [gen_i, ]
                 gts['%d_%d' % (it, i)] = gts_i
 
-            if args.debug and it > 10:
-                break
-
     gts = evaluation.PTBTokenizer.tokenize(gts)
     gen = evaluation.PTBTokenizer.tokenize(gen)
 
@@ -60,7 +57,6 @@ if __name__ == '__main__':
 
     # Argument parsing
     parser = argparse.ArgumentParser(description='CaMEL Evaluation')
-    parser.add_argument('--debug', action='store_true')
     parser.add_argument('--batch_size', type=int, default=25)
     parser.add_argument('--workers', type=int, default=0)
     parser.add_argument('--annotation_folder', type=str, required=True)
@@ -81,9 +77,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     _logger.info(args)
-
-    if args.debug:
-        _print_freq = 1
 
     # Pipeline for image regions
     clip_model, transform = clip.load(args.clip_variant, jit=False)

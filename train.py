@@ -54,9 +54,6 @@ def evaluate_metrics(model, dataloader, text_field):
                 gen['%d_%d_%d' % (args.rank, it, i)] = [gen_i, ]
                 gts['%d_%d_%d' % (args.rank, it, i)] = gts_i
 
-            if args.debug and it > 10:
-                break
-
     if args.distributed:
         paths_all = [None for _ in range(args.world_size)]
         gts_all = [None for _ in range(args.world_size)]
@@ -126,9 +123,6 @@ def train_xe(target_model, online_model, dataloader, optim, text_field):
             torch._foreach_add_(params_t, w)
 
         metric_logger.update(loss=loss)
-
-        if args.debug and it > 10:
-            break
 
     metric_logger.synchronize_between_processes()
     return metric_logger.loss.global_avg
@@ -205,9 +199,6 @@ def train_scst(target_model, online_model, dataloader, optim, cider, text_field)
 
         metric_logger.update(loss=loss, reward=reward.mean())
 
-        if args.debug and it > 10:
-            break
-
     metric_logger.synchronize_between_processes()
     tokenizer_pool.close()
     return metric_logger.loss.global_avg, metric_logger.reward.global_avg
@@ -219,7 +210,6 @@ if __name__ == '__main__':
     # Argument parsing
     parser = argparse.ArgumentParser(description='CaMEL Training')
     parser.add_argument('--exp_name', type=str, default='camel')
-    parser.add_argument('--debug', action='store_true')
     parser.add_argument('--batch_size', type=int, default=25)
     parser.add_argument('--workers', type=int, default=0)
     parser.add_argument('--resume_last', action='store_true')
@@ -250,9 +240,6 @@ if __name__ == '__main__':
     args.exp_name += args.phase
 
     _logger.info(args)
-
-    if args.debug:
-        _print_freq = 1
 
     random.seed(1234)
     torch.manual_seed(1234)
@@ -468,5 +455,5 @@ if __name__ == '__main__':
             if best:
                 copyfile(f'saved_models/{args.exp_name}_last.pth', f'saved_models/{args.exp_name}_best.pth')
 
-        if exit_train or args.debug:
+        if exit_train:
             break

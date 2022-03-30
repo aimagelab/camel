@@ -3,10 +3,10 @@ This repository contains the reference code for the paper _[CaMEL: Mean Teacher 
 
 Please cite with the following BibTeX:
 ```
-@article{barraco2022camel,
+@inproceedings{barraco2022camel,
   title={{CaMEL: Mean Teacher Learning for Image Captioning}},
   author={Barraco, Manuele and Stefanini, Matteo and Cornia, Marcella and Cascianelli, Silvia and Baraldi, Lorenzo and Cucchiara, Rita},
-  journal={arXiv preprint arXiv:2202.10492},
+  booktitle={International Conference on Pattern Recognition},
   year={2022}
 }
 ```

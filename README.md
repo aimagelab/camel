@@ -30,8 +30,8 @@ Note: Python 3.8 is required to run our code.
 
 ## Data preparation
 To run the code, annotations and images for the COCO dataset are needed.
-Please download the zip files containing the images ([train2014.zip](http://images.cocodataset.org/zips/train2014.zip), [val2014.zip](http://images.cocodataset.org/zips/val2014.zip)),
-the zip file containing the annotations ([annotations_trainval2014.zip](http://images.cocodataset.org/annotations/annotations_trainval2014.zip)) and extract them. These paths will be set as arguments later.
+Please download the zip files containing the images ([train2014.zip](http://images.cocodataset.org/zips/train2014.zip), [val2014.zip](http://images.cocodataset.org/zips/val2014.zip)), and the annotations ([annotations.zip](https://drive.google.com/file/d/1i8mqKFKhqvBr8kEp3DbIh9-9UNAfKGmE/view?usp=sharing)) and extract them. 
+These paths will be set as arguments later.
 
 ## Evaluation
 To reproduce the results reported in our paper, download the pretrained model file [camel_mesh.pth](https://drive.google.com/file/d/10zmfZnLAuxuv-4mdiQASmrhkdDK_95D7/view?usp=sharing) or [camel_nomesh.pth](https://drive.google.com/file/d/1GnYv21BC6Ih_dP8_s75WJx7b7iDjIVF6/view?usp=sharing) and place it anywhere. Its path will be set as argument later.

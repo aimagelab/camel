@@ -30,7 +30,7 @@ Note: Python 3.8 is required to run our code.
 
 ## Data preparation
 To run the code, annotations and images for the COCO dataset are needed.
-Please download the zip files containing the images ([train2014.zip](http://images.cocodataset.org/zips/train2014.zip), [val2014.zip](http://images.cocodataset.org/zips/val2014.zip)), and the annotations ([annotations.zip](https://drive.google.com/file/d/1i8mqKFKhqvBr8kEp3DbIh9-9UNAfKGmE/view?usp=sharing)) and extract them. 
+Please download the zip files containing the images ([train2014.zip](http://images.cocodataset.org/zips/train2014.zip), [val2014.zip](http://images.cocodataset.org/zips/val2014.zip)), and the annotations ([annotations.zip](https://aimagelab.ing.unimore.it/go/coco_annotations)) and extract them. 
 These paths will be set as arguments later.
 
 ## Evaluation

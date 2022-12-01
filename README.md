@@ -34,7 +34,7 @@ Please download the zip files containing the images ([train2014.zip](http://imag
 These paths will be set as arguments later.
 
 ## Evaluation
-To reproduce the results reported in our paper, download the pretrained model file [camel_mesh.pth](https://drive.google.com/file/d/10zmfZnLAuxuv-4mdiQASmrhkdDK_95D7/view?usp=sharing) or [camel_nomesh.pth](https://drive.google.com/file/d/1GnYv21BC6Ih_dP8_s75WJx7b7iDjIVF6/view?usp=sharing) and place it anywhere. Its path will be set as argument later.
+To reproduce the results reported in our paper, download the pretrained model file [camel_mesh.pth](https://aimagelab.ing.unimore.it/go/camel_mesh.pth) or [camel_nomesh.pth](https://aimagelab.ing.unimore.it/go/camel_nomesh.pth) and place it anywhere. Its path will be set as argument later.
 
 Run `python evaluation.py` using the following arguments:
 
